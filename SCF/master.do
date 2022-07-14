@@ -16,9 +16,7 @@ clear all
 set more off, permanently 
 set maxvar 30000
 
-set processors `c(processors_max)'  // Max 2 processors in Andres's server
-
-cap log close _all
+set processors `c(processors_max)' 
 
 global user = "`c(username)'" 
 
@@ -31,7 +29,7 @@ if _rc {
 }
 
 global clean = "${path_init}/clean"
-global raw  = "${path_init}/Raw"
+global raw  = "${path_init}/raw"
 
 
 ********************************************************************************
